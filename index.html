@@ -480,15 +480,49 @@
               </a>
             </li>
           </ul>
+          <p class="social-footer-h">Subscribe</p>
+          <ul>
+            <li>
+              <svg class="" width="" height="">
+                <use href="./images/icons.svg# "></use>
+              </svg>
+            </li>
+            <li>
+              <svg class="" width="" height="">
+                <use href="./images/icons.svg# "></use>
+              </svg>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
 
-    <div class="backdrop is-open">
+    <div class="backdrop is-open" data-modal>
       <div class="modal">
-     
+        <button class="button" type="modal-close" data-modal-close>
+          <svg class="" width="" height="">
+            <use href="./images/icons.svg# "></use>
+          </svg>
+        </button>
+
+        <p class="modal-info">Leave your contacts and we will call you back</p>
+
+        <form class="form" name="issue_report_form" autocomplete="off">
+          <div>
+            <label class="form-label"
+              >Name
+              <div>
+                <input class="form-input" type="text" name="username" />
+                <svg class="icons-five">
+                  <use href="./images/icons.svg# "></use>
+                </svg>
+              </div>
+            </label>
+          </div>
+        </form>
       </div>
     </div>
 
+    <script src="./js/modal.js"></script>
   </body>
 </html>
