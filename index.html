@@ -480,19 +480,27 @@
               </a>
             </li>
           </ul>
-          <p class="social-footer-h">Subscribe</p>
-          <ul>
-            <li>
-              <svg class="" width="" height="">
-                <use href="./images/icons.svg# "></use>
-              </svg>
-            </li>
-            <li>
-              <svg class="" width="" height="">
-                <use href="./images/icons.svg# "></use>
-              </svg>
-            </li>
-          </ul>
+
+          <div class="Subscribe-sec">
+              <p class="Subscribe-h">Subscribe</p>
+                <form class="Subscribe">
+                  <label aria-label="footer-email" class="footer-field">
+                    <input
+                      type="email"
+                      name="footer-email"
+                      placeholder="Email"
+                      class="footer-input"
+                    />
+                  </label>
+                    <button type="submit" class="Subscribe-btn">
+                      Subscribe
+                      <svg class="Subscribe-btn-send" width="24" height="20">
+                        <use href="./images/icons.svg#icon-icon-send"></use>
+                      </svg>
+                    </button>
+              </form>
+           </div>
+
         </div>
       </div>
     </footer>
@@ -570,8 +578,12 @@
                 <a href="" class="policy-color">Privacy Policy</a></label
               >
             </div>
+            <div>
+              <label>
+                <button class="button-form" type="button">Send</button>
+              </label>
+            </div>
           </div>
-          
         </form>
       </div>
     </div>
