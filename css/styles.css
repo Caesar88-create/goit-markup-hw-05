@@ -70,7 +70,7 @@ p {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
-  letter-spacing: -0, 03em;
+  letter-spacing: 0.03em;
   color: #2e2f42;
 }
 
@@ -79,7 +79,7 @@ p {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
-  letter-spacing: -0, 03em;
+  letter-spacing: 0.03em;
   color: #4d5ae5;
   margin-right: 76px;
   padding: 24px 0;
@@ -410,10 +410,6 @@ p {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-btn .transition {
-  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .hero-btn:hover {
   background-color: #404BBF;
 }
@@ -580,7 +576,7 @@ p {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.17;
-  letter-spacing: -0, 03em;
+  letter-spacing: 0.03em;
   color: #4d5ae5;
   display: inline-block;
   margin-bottom: 16px;
@@ -672,10 +668,6 @@ p {
   background-color: #31d0aa;
 }
 
-.transition {
-  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -684,9 +676,9 @@ p {
   width: 100%;
   height: 100%;
 
-  pointer-events: none; 
+  /* pointer-events: none; 
   visibility: hidden; 
-  opacity: 0;
+  opacity: 0; */
 
   Z-index: 999;
 
@@ -697,12 +689,11 @@ p {
 
 }
 
-/* .backdrop.is-open {
+.backdrop.is-open {
   opacity: 1; 
   visibility: visible; 
   pointer-events: auto;
-  padding: 72px 24px 24px 24px;
-} */
+} 
 
 
 .modal {
@@ -722,14 +713,8 @@ p {
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-}
+  padding: 72px 24px 24px 24px;
 
-.backdrop.is-open:hover {
-  fill: #ffffff;
-}
-
-.backdrop.is-open:focus {
-  fill: #ffffff;
 }
 
 .backdrop:not(.is-open) .modal {
@@ -747,7 +732,6 @@ p {
   right: 24px;
   top: 24px;
 
-  padding: 0 right;
   padding: 0; 
   color: #2E2F42;
   align-items:center;
@@ -766,27 +750,15 @@ p {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-close:hover {
+.button-close:hover,
+.button-close:focus {
   background-color: #404BBF;
   border-style: none;
-  fill: #FFFFFF;
 }
 
-.button-close:focus {
-  border-color: #E7E9FC;
-  fill: #2E2F42;
-  background-color: #404bbf;
-  border: none; 
+.button-close:hover .icon-close,
+.button-close:focus .icon-close {
   fill: #ffffff
-}
-
-.form-str {
-  height: 336px;
-  padding-top: 112px;
-  border-radius: 4px;
-  width: 408px;
-  height: 584px;
-  background-color: #fcfcfc;
 }
 
 .form-plan {
@@ -794,14 +766,9 @@ p {
 }
 
 .modal-info {
-  left: 24px;
-  top: 72px;
-  position: absolute;
-  box-align: center;
-
+  font-family: inherit;
   font-weight: 500;
-  line-height: 24px; 
-  width: 360px;
+  line-height: 1.5; 
 
   color: #2E2F42;
 
@@ -811,19 +778,29 @@ p {
 }
 
 .form-label {
+  font-family: inherit;
   color: #8E8F99;
-  padding-left: 24px;
-  padding-right: 24px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   display: block;
   margin-bottom: 4px;
+  font-weight: 400;
+  width: 100%;
 }
 
-.form-info {
+.form-info  {
   position: relative; 
 }
+
+.form-info:focus-within .form-input {
+  border-color: #6c63ff;
+}
+
+.form-info:focus-within .icons-five {
+  fill: #4d5ae5;
+}
+
 
 .form-input {
   background-color: transparent;
@@ -838,7 +815,6 @@ p {
 
   border: 1px solid rgba(46, 47, 66, 0.4);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
 }
 
 .form-input:focus {
@@ -859,65 +835,52 @@ p {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
-.icons-five :focus {
-  fill: #4D5AE5;
-}
-
-.form-input-two {
-  padding-left: 16px;
-  padding-left: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  width: 100%;
-  height: 138px;
-  border-radius: 4px;
-}
-
-form-input-two::placeholder {
+.comment-shape::placeholder {
+  font-family: inherit;
   letter-spacing: 0.04px;
   font-size: 12px;
-  line-height: 1.6667;
-  color:rgba(46, 47, 65, 0.4);
+  line-height: 1.17;
   font-weight: 400;
 }
 
 .comment-shape {
-  width: 360px;
+  font-family: inherit;
+  width: 100%;
   height: 120px;
   color: #8E8F99;
-  padding-left: 24px;
-  padding-right: 24px;
+
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   display: block;
   margin-bottom: 4px;
-  padding-top: 8px;
+  padding: 8px 16px;
   border-radius: 4px;
 
   background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-  display: flex;
-  overflow: hidden;
+
   resize: none;
 }
 
+.modal-comment {
+  margin-bottom: 16px;  
+}
 
 .modal-checkbox {
   margin-bottom: 24px;  
-  margin-left: 24px; 
-  margin-top: 16px; 
 }
 
-.modal-check-text{
+.modal-check-text {
+  font-family: inherit;
   font-weight: 400;
       font-size: 12px;
       line-height: 1.17;
-      letter-spacing: 0.04em;
-      color: #8e8f99;        
-      align-items: center;          
+      letter-spacing: 0.04em;     
+  text-align: center;
+  display: inline-block; 
+  gap: 2px;        
 }
 
 .modal-check-item {
@@ -934,7 +897,7 @@ form-input-two::placeholder {
   
 }
 
-.modal-check:checked + .modal-check-text .modal-check-item {
+.modal-check:checked+.modal-check-text .modal-check-item {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
@@ -961,13 +924,9 @@ form-input-two::placeholder {
   background-color: #4D5AE5;
   border: none;
   border-radius: 4px;
-  margin-left: 120px;
+  margin: auto;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button-form .transition {
-  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-form:hover {
@@ -978,11 +937,11 @@ form-input-two::placeholder {
   background-color: #404BBF;
 }
 
-.Subscribe-sec {
+.subscribe-sec {
   margin-left: auto;
 }
 
-.Subscribe-h {
+.subscribe-h {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -993,7 +952,7 @@ form-input-two::placeholder {
   margin-right: auto;
 }
 
-.Subscribe {
+.subscribe {
   display: flex;
   gap: 24px;
 }
@@ -1013,7 +972,7 @@ form-input-two::placeholder {
   font-family: inherit;
   padding-left: 16px;
   outline: none;
-
+  letter-spacing: 0.04em;
 }
 
 .footer-input::placeholder {
@@ -1026,17 +985,13 @@ form-input-two::placeholder {
 
 }
 
-.Subscribe-btn {
-  width: 165px;
+.subscribe-btn {
+  min-width: 165px;
   height: 40px;
-  top: 140px;
-  padding: 8px 24px 8px 24px;
-  gap: 16px;
-  opacity: 0px;
+  padding: 8px 24px;
 
-  display: block;
-  min-width: 169px;
-  font-family: "Roboto";
+  display: flex;
+  font-family: inherit;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -1045,39 +1000,40 @@ form-input-two::placeholder {
   background-color: #4D5AE5;
   border: none;
   border-radius: 4px;
-
-
+  justify-content: center;
+  align-items: center;
 }
 
-.Subscribe-btn:hover,
-.Subscribe-btn.focus {
+.subscribe-btn:hover,
+.subscribe-btn.focus {
   background-color: #404BBF;
 }
 
-.Subscribe-btn-send {
+.subscribe-btn-send {
   fill: #f4f4fd;
+  margin-left: 16px;
 }
 
-.Subscribe-btn {
+.subscribe-btn {
   display: flex;
   align-items: center;
   flex-direction: row;
   gap: 16px;
   border-radius: 4px;
-  padding: 8px, 24px;
+  padding: 8px 24px;
   width: 165px;
   height: 40px;
   background-color: #4D5AE5;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.04;
+  letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
   border: none;
 
 }
 
-.Subscribe-btn-send {
+.subscribe-btn-send {
   fill: #fff;
 }
