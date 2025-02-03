@@ -899,10 +899,6 @@ p {
   
 }
 
-.check-icon {
-  fill: #F4F4FD;
-}
-
 .modal-check:checked+.modal-check-text .modal-check-item {
   background-color: #404bbf;
   border: none;
